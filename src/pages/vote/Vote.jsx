@@ -1,12 +1,12 @@
 import styles from "./Vote.module.scss";
 import React, { useState } from "react";
-import { useAuth } from "../../hooks/useAuth"; // Импортируем хук
+import { useAuth } from "../../hooks/useAuth";
 import { sendVote } from "../../services/voteService";
 import { useNavigate } from "react-router-dom";
 import Modal from "../../components/modal/Modal";
 
 const Vote = () => {
-  const { auth } = useAuth(); // Используем хук для получения информации о пользователе
+  const { auth } = useAuth(); 
   const [selectedOptions, setSelectedOptions] = useState("");
   const [otherText, setOtherText] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +18,7 @@ const Vote = () => {
     e.preventDefault();
 
     if (!auth) {
-      navigate("/login"); // Если не авторизован, перенаправляем на страницу логина
+      navigate("/login");
       return;
     }
 
