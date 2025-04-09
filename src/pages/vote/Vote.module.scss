@@ -1,0 +1,72 @@
+@use "../../assets/styles/variables" as *;
+.voteContainer {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: #f1f1f1; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+  h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #6d2a49; 
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: #B53471; 
+  }
+
+  input[type="text"] {
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+
+    &:focus {
+      border-color: #B53471; 
+      outline: none;
+    }
+  }
+
+  button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    background-color: #d397b4; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#b67c97, 10%); 
+    }
+
+    &:disabled {
+      background-color: #ddd; 
+      cursor: not-allowed;
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
